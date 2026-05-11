@@ -1,0 +1,19 @@
+[ca]
+default_ca = myca
+
+[myca]
+dir              = /etc/freeradius/certs/ca-db
+database         = $dir/index.txt
+serial           = $dir/serial
+new_certs_dir    = $dir/newcerts
+certificate      = /etc/freeradius/certs/ca.pem
+private_key      = /etc/freeradius/certs/ca.key
+default_md       = sha256
+default_days     = 730
+policy           = policy_any
+
+[policy_any]
+countryName            = optional
+stateOrProvinceName    = optional
+organizationName       = optional
+commonName             = supplied

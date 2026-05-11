@@ -73,6 +73,8 @@ network={
 - import the `.p12` and ca.pem file
 - select EAP-TLS
 
+# OCSP
+openssl.cnf has to be copied in /etc/freeradius/certs
 
 # TODO
 - deploy CRL or OCSP for client revocation
